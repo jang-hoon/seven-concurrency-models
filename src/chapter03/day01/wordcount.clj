@@ -31,6 +31,11 @@
 (println (map multiply-by-2 [0 1 2 3 4 5]))
 
 
+(println ((partial + 2) 1))
+(println ((partial (fn [x y z] (+ x (+ y z))) 2 3) 1))
+
+
+
 (defn get-words [text] (re-seq #"\w+" text))
 
 (println (get-words "one two three four"))
